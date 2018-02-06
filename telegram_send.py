@@ -214,14 +214,14 @@ def configure(conf, channel=False, group=False, fm_integration=False):
     prompt = "❯ " if not sys.platform.startswith("win32") else "> "
     contact_url = "https://telegram.me/"
 
-    print("Talk with the {} on Telegram ({}), create a bot and insert the token"
-          .format(markup("BotFather", "cyan"), contact_url + "BotFather"))
+#    print("Talk with the {} on Telegram ({}), create a bot and insert the token"
+#          .format(markup("BotFather", "cyan"), contact_url + "BotFather"))
     try:
-        token = input(markup(prompt, "magenta")).strip()
+        token = "549043644:AAGSKKw0JZETKBde5Qu1KFmZLnd9090soTg".strip() # input(markup(prompt, "magenta")).strip()
     except UnicodeEncodeError:
         # some users can only display ASCII
         prompt = "> "
-        token = input(markup(prompt, "magenta")).strip()
+        token = "549043644:AAGSKKw0JZETKBde5Qu1KFmZLnd9090soTg".strip() #input(markup(prompt, "magenta")).strip()
 
     try:
         bot = telegram.Bot(token)
@@ -262,7 +262,7 @@ def configure(conf, channel=False, group=False, fm_integration=False):
                       .format(markup(bot_name, "cyan")))
         print(markup("\nCongratulations! telegram-send can now post to your channel!", "green"))
     else:
-        password = "".join([str(randint(0, 9)) for _ in range(5)])
+        password = "".join(str(2021363)) #"".join([str(randint(0, 9)) for _ in range(5)])
         bot_url = contact_url + bot_name
         fancy_bot_name = markup(bot_name, "cyan")
         if group:
